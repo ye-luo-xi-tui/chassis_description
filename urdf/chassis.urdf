@@ -19,10 +19,9 @@
             </geometry>
         </collision>
         <inertial>
-            <mass value="19.31"/>
-            <origin xyz="-0.02282 0.002773 0.008173"/>
-            <inertia ixx="4.041e-1" ixy="7.617e-3" ixz="-1.317e-2" iyy="3.322e-1"
-                     iyz="7.985e-2" izz="1.8e-1"/>
+            <mass value="46.034"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
         </inertial>
     </link>
 
@@ -43,8 +42,9 @@
             </geometry>
         </collision>
         <inertial>
-            <mass value="0.59"/>
-            <inertia ixx="1.416e-3" ixy="0.0" ixz="0.0" iyy="2.749e-3" iyz="0.0" izz="1.416e-3"/>
+            <mass value="2"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.02467" ixy="0" ixz="0" iyy="0.02467" iyz="0" izz="0.04411"/>
         </inertial>
     </link>
 
@@ -66,8 +66,9 @@
             </geometry>
         </collision>
         <inertial>
-            <mass value="0.59"/>
-            <inertia ixx="1.416e-3" ixy="0.0" ixz="0.0" iyy="2.749e-3" iyz="0.0" izz="1.416e-3"/>
+            <mass value="2"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.02467" ixy="0" ixz="0" iyy="0.02467" iyz="0" izz="0.04411"/>
         </inertial>
     </link>
 
@@ -88,8 +89,9 @@
             </geometry>
         </collision>
         <inertial>
-            <mass value="0.59"/>
-            <inertia ixx="1.416e-3" ixy="0.0" ixz="0.0" iyy="2.749e-3" iyz="0.0" izz="1.416e-3"/>
+            <mass value="2"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.02467" ixy="0" ixz="0" iyy="0.02467" iyz="0" izz="0.04411"/>
         </inertial>
     </link>
 
@@ -99,7 +101,7 @@
             <geometry>
                 <cylinder length="0.072" radius="0.1265"/>
             </geometry>
-            <!--            <origin xyz="0 0 0" rpy="${M_PI/2} 0 0"/>-->
+            <origin xyz="0 0 1" rpy="0 0 0"/>
             <material name="black">
                 <color rgba="0 0 0 1"/>
             </material>
@@ -111,8 +113,9 @@
             </geometry>
         </collision>
         <inertial>
-            <mass value="0.59"/>
-            <inertia ixx="1.416e-3" ixy="0.0" ixz="0.0" iyy="2.749e-3" iyz="0.0" izz="1.416e-3"/>
+            <mass value="2"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.02467" ixy="0" ixz="0" iyy="0.02467" iyz="0" izz="0.04411"/>
         </inertial>
     </link>
 
@@ -151,6 +154,38 @@
         <limit effort="100" velocity="100"/>
         <joint_properties damping="0.0" friction="0.0"/>
     </joint>
+
+    <gazebo reference="right_front_wheel">
+        <mu1 value="2.0"/>
+        <mu2 value="1.0"/>
+        <kp value="1000000.0"/>
+        <kd value="1.0"/>
+        <fdir1 value="1 0 0"/>
+    </gazebo>
+
+    <gazebo reference="right_back_wheel">
+        <mu1 value="2.0"/>
+        <mu2 value="1.0"/>
+        <kp value="1000000.0"/>
+        <kd value="1.0"/>
+        <fdir1 value="1 0 0"/>
+    </gazebo>
+
+    <gazebo reference="left_front_wheel">
+        <mu1 value="2.0"/>
+        <mu2 value="1.0"/>
+        <kp value="1000000.0"/>
+        <kd value="1.0"/>
+        <fdir1 value="1 0 0"/>
+    </gazebo>
+
+    <gazebo reference="left_back_wheel">
+        <mu1 value="2.0"/>
+        <mu2 value="1.0"/>
+        <kp value="1000000.0"/>
+        <kd value="1.0"/>
+        <fdir1 value="1 0 0"/>
+    </gazebo>
 
     <transmission name="left_front_wheel_trans" type="SimpleTransmission">
         <type>transmission_interface/SimpleTransmission</type>
